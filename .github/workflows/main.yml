@@ -43,8 +43,9 @@ jobs:
       name: Push Docker image to Docker Hub
       runs-on: ubuntu-latest
       needs: tests
+      
       steps:
-        - name: Check out the repo
+      - name: Check out the repo
         # Проверка доступности репозитория Docker Hub для workflow
         uses: actions/checkout@v2 
       - name: Set up Docker Buildx
