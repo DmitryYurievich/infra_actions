@@ -78,6 +78,6 @@ jobs:
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull dmitryshchapov/infra_actions:v1
-          #остановка всех контейнеров1
+          #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 dmitryshchapov/infra_actions:v1
+          sudo docker run --rm -d -p 5000:5001 dmitryshchapov/infra_actions:v1
